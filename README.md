@@ -2,6 +2,8 @@
 
 Pokedex clone with improved battle insights.
 
+> Found here: https://pokemon-battle-companion.herokuapp.com/api
+
 ## Table of Contents
 
 + [API](#api)
