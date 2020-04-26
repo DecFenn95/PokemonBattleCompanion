@@ -29,7 +29,7 @@ public class PokemonController {
 
     @GetMapping
     @RequestMapping("/pokedex/{pokedex_number}")
-    public List<Pokemon> getByPokedexNumber(@PathVariable("pokedex_number") Integer pokedexNumber){
+    public Pokemon getByPokedexNumber(@PathVariable("pokedex_number") String pokedexNumber){
         return pokemonRepository.getByPokedexNumber(pokedexNumber);
     }
 

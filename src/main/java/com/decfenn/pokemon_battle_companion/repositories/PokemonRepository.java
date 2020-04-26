@@ -10,7 +10,7 @@ import java.util.List;
 public interface PokemonRepository extends JpaRepository<Pokemon, Long> {
 
     @Query("FROM #{#entityName} p WHERE p.pokedex_number = ?1")
-    public List<Pokemon> getByPokedexNumber(@Param("pokedex_number") Integer pokedexNumber);
+    public Pokemon getByPokedexNumber(@Param("pokedex_number") String pokedexNumber);
 
     @Query("FROM #{#entityName} p WHERE Lower(p.pokemon_name) LIKE Lower(concat('%', ?1,'%'))")
     public List<Pokemon> getByName(@Param("pokemon_name") String pokemonName);

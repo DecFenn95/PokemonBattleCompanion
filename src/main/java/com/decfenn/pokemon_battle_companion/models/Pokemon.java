@@ -10,7 +10,7 @@ public class Pokemon {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long pokemon_id;
-    private Integer pokedex_number;
+    private String pokedex_number;
     private String pokemon_name;
     private String pokemon_type;
     private String other_type;
@@ -23,6 +23,7 @@ public class Pokemon {
     private Integer speed;
     private Integer generation_number;
     private boolean is_legendary;
+    private boolean is_mega;
     private String pokemon_photo_url;
 
     public Pokemon() {
@@ -44,11 +45,11 @@ public class Pokemon {
         this.pokemon_id = pokemon_id;
     }
 
-    public Integer getPokedex_number() {
+    public String getPokedex_number() {
         return pokedex_number;
     }
 
-    public void setPokedex_number(Integer pokedex_number) {
+    public void setPokedex_number(String pokedex_number) {
         this.pokedex_number = pokedex_number;
     }
 
@@ -146,5 +147,13 @@ public class Pokemon {
 
     public void setIs_legendary(boolean is_legendary) {
         this.is_legendary = is_legendary;
+    }
+
+    public boolean isIs_mega() {
+        return is_mega;
+    }
+
+    public void setIs_mega(boolean is_mega) {
+        this.is_mega = is_mega;
     }
 }
